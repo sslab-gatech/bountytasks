@@ -12,4 +12,7 @@ RUN sed -i '/"bitsandbytes.*"/d' pyproject.toml
 RUN pip install -e ".[dev]"
 RUN pip install -e ".[test]"
 
+# Fix onnxruntime binary incompatibility with kernel security settings
+RUN pip install "onnxruntime>=1.17.0"
+
 ENTRYPOINT ["invokeai-web"]

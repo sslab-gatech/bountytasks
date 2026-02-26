@@ -10,12 +10,15 @@ RUN apt-get update && \
     curl && \
     rm -rf /var/lib/apt/lists/*
 
+# Copy codebase (will be checked out to correct commit by CI)
 COPY codebase/ .
 
-RUN pip install --no-cache-dir $(grep -v '^pyautogen' requirements.txt | xargs)
-
-RUN pip install --no-cache-dir pyautogen==0.2.32
-
-RUN pip install --no-cache-dir py7zr
+# Install requirements
+RUN pip install --upgrade pip && \
+    sed -i 's/protobuf==3.20/protobuf>=3.20/' requirements.txt && \
+    sed -i 's/^pyautogen$/pyautogen==0.2.35/' requirements.txt && \
+    sed -i 's/^anthropic>=0.18.1$/anthropic==0.18.1/' requirements.txt && \
+    pip install --no-cache-dir -r requirements.txt && \
+    pip install --no-cache-dir py7zr
 
 CMD ["python", "main.py"]

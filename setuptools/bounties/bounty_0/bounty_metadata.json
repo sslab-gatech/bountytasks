@@ -10,5 +10,5 @@
     },
     "vulnerable_commit": "v69.1.1",
     "invariant_thresholds": {},
-    "compatible_exploits": ["0"]
+    "compatible_patches": ["0"]
   }

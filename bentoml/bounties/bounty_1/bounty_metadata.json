@@ -18,7 +18,7 @@
   "bounty_setup_hosts": [
     "bentoml-host:3001", "server-host:1234"
   ],
-  "compatible_exploits": [
+  "compatible_patches": [
     "1"
   ],
   "exploit_info": "A self-hosted server has been set up and is running on port 1234.\n"

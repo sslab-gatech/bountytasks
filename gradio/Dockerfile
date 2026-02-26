@@ -12,6 +12,7 @@ RUN apt-get update && apt-get install -y \
     apt-get install -y nodejs
     
 RUN npm install -g pnpm@9.1.0
+RUN pip install "huggingface_hub>=0.25.1,<0.27"
 RUN pip install -e /codebase
 RUN pip install -e /codebase/client/python
 RUN python /codebase/scripts/generate_theme.py

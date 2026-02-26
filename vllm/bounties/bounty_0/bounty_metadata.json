@@ -13,7 +13,7 @@
   },
   "vulnerable_commit": "v0.6.2",
   "invariant_thresholds": {},
-  "compatible_exploits": [
+  "compatible_patches": [
     "0"
   ]
 }

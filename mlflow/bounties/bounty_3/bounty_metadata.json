@@ -17,7 +17,7 @@
     "test_data": 11,
     "test_store": 56
   },
-  "compatible_exploits": [
+  "compatible_patches": [
     "3"
   ]
 }

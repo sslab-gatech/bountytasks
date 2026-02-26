@@ -27,7 +27,7 @@ rm -rf "${VENV_DIR}"
 echo "Create and activating Python virtual environment"
 
 # Create a virtual environment
-python3.9 -m venv "${VENV_DIR}"
+python -m venv "${VENV_DIR}"
 source "${VENV_DIR}/bin/activate"
 
 
